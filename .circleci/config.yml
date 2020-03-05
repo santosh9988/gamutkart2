@@ -2,16 +2,16 @@ version: 2.0
  jobs:
    one:    
      docker:
-      - image: santosh9988/nginx
-        auth:
-          username: $dockerhub_username
-          password: $dockerhub_password
+       - image: santosh9988/nginx
+         auth:
+           username: $dockerhub_username
+           password: $dockerhub_password
      steps:
-       - checkout
-       - run: uname  -a
-       - run: apt-get update -y
-       - run: apt-get install git -y
-       - run: git --version
+        - checkout
+        - run: uname  -a
+        - run: apt-get update -y
+        - run: apt-get install git -y
+        - run: git --version
  jobs:
    one:
      docker:
