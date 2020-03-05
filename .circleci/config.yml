@@ -15,8 +15,11 @@ jobs:
     - image: circleci/node:4.8.2
   steps:
     - checkout
-    - run: sudo apt-get install -y openssh-server
-    - run: sudo systemctl enable ssh
+    - command: |
+	echo "$dockerhub_password" | docker login -u "$dockerhub_username" --password-stdin
+                docker push $IMAGE_NAME:latest
+
+
 workflows:
   version: 2
   one_and_two:
