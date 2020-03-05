@@ -1,8 +1,11 @@
-version: 2.0
+ version: 2.0
  jobs:
    one:    
      docker:
       - image: santosh9988/nginx
+        auth:
+          username: $dockerhub_username
+          password: $dockerhub_password
      steps:
        - checkout
        - run: uname  -a
