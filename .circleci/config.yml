@@ -3,14 +3,18 @@ jobs:
   one:    
     docker:
      - image: santosh9988/nginx
-     steps:
+    steps:
        - checkout
        - run: uname  -a
        - run: apt-get update -y
        - run: apt-get install git -y
        - run: git --version
 jobs:
-  one:                                                                                                                      docker:                                                                                                                  - image: santosh9988/nginx                                                                                              steps:                                                                                                                    - checkout
+  one:
+    docker:
+      - image: santosh9988/nginx
+    steps:
+       - checkout
        - run: apt-get install openssh-server
        - run: systemctl enable ssh
 workflows:
