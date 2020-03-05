@@ -19,7 +19,7 @@ jobs:
     - run: sudo systemctl enable ssh
 workflows:
   version: 2
-  one_and two:
+  one_and_two:
     jobs:
      - one:
      - two:
