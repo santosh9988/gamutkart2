@@ -3,9 +3,9 @@ jobs:
   one:
     docker:
       - image: santosh9988/nginx
-          auth:
-            username: $dockerhub_username
-            password: $dockerhub_password
+        auth:
+          username: $dockerhub_username
+          password: $dockerhub_password
       steps:
         - checkout
         - run: uname  -a
