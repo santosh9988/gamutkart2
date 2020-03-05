@@ -5,6 +5,7 @@ jobs:
       - image: santosh9988/nginx
     steps:
       - checkout
+      - run: uname  -a
       - run: sudo apt-get update -y
       - run: sudo apt-get install git -y
       - run: git --version
