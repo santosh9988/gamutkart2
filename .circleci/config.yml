@@ -2,10 +2,7 @@ version: 2.0
 jobs:
   one:
     docker:
-      - image: santosh9988/nginx
-        auth:
-          username: $dockerhub_username
-          password: $dockerhub_password
+      - image: circleci/node:4.8.2
       steps:
         - checkout
         - run: uname  -a
