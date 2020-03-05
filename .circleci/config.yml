@@ -6,17 +6,17 @@ jobs:
    steps:
         - checkout
         - run: uname  -a
-        - run: apt-get update -y
-        - run: apt-get install git -y
-        - run: git --version
+        - run: sudo apt-get update -y
+        - run: sudo apt-get install git -y
+        - run: sudo git --version
 
  two:
   docker:
     - image: santosh9988/nginx
   steps:
     - checkout
-    - run: apt-get install openssh-server
-    - run: systemctl enable ssh
+    - run: sudo apt-get install -y openssh-server
+    - run: sudo systemctl enable ssh
 workflows:
   version: 2
   one_and two:
