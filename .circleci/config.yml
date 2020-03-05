@@ -1,8 +1,7 @@
 version: 2.0
  jobs:
-   one: 
-    build:   
-      docker:
+   one:   
+     docker:
         - image: santosh9988/nginx
           auth:
             username: $dockerhub_username
