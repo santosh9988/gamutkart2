@@ -1,23 +1,22 @@
 version: 2
 jobs:
-  one:
-    docker:
-      - image: circleci/node:4.8.2
-    steps:
+ one:
+   docker:
+     - image: circleci/node:4.8.2
+   steps:
         - checkout
         - run: uname  -a
         - run: apt-get update -y
         - run: apt-get install git -y
         - run: git --version
-jobs:
-   two:
-     build:
-      docker:
-        - image: santosh9988/nginx
-      steps:
-        - checkout
-        - run: apt-get install openssh-server
-        - run: systemctl enable ssh
+
+ two:
+  docker:
+    - image: santosh9988/nginx
+  steps:
+    - checkout
+    - run: apt-get install openssh-server
+    - run: systemctl enable ssh
 workflows:
   version: 2
   one_and two:
