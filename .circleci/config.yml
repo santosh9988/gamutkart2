@@ -1,8 +1,8 @@
 version: 2.0
- jobs:
-   one:   
-     docker:
-        - image: santosh9988/nginx
+jobs:
+  one:
+    docker:
+      - image: santosh9988/nginx
           auth:
             username: $dockerhub_username
             password: $dockerhub_password
@@ -12,7 +12,7 @@ version: 2.0
         - run: apt-get update -y
         - run: apt-get install git -y
         - run: git --version
- jobs:
+jobs:
    two:
      build:
       docker:
