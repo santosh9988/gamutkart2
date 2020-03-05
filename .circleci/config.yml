@@ -6,6 +6,6 @@ jobs:
     steps:
       - checkout
       - run: uname  -a
-      - run: sudo apt-get update -y
-      - run: sudo apt-get install git -y
+      - run: apt-get update -y
+      - run: apt-get install git -y
       - run: git --version
