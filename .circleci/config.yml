@@ -15,9 +15,7 @@ jobs:
     - image: circleci/node:4.8.2
   steps:
     - checkout
-    - command: |
-	echo "$dockerhub_password" | docker login -u "$dockerhub_username" --password-stdin
-                docker push $IMAGE_NAME:latest
+    - run: which git
 
 
 workflows:
